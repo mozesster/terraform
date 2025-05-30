@@ -7,10 +7,16 @@ terraform {
 }
 
 resource "aws_instance" "no_count" {
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 resource "aws_instance" "count" {
   count = 1
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 resource "boop_instance" "yep" {

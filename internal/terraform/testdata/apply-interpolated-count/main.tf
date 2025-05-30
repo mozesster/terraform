@@ -4,8 +4,14 @@ variable "instance_count" {
 
 resource "aws_instance" "test" {
   count = "${var.instance_count}"
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 resource "aws_instance" "dependent" {
   count = "${length(aws_instance.test)}"
+  tags = {
+    git_org = "mozesster"
+  }
 }

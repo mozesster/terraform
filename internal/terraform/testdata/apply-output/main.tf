@@ -1,11 +1,17 @@
 resource "aws_instance" "foo" {
-    num = "2"
+  num = "2"
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 resource "aws_instance" "bar" {
-    foo = "bar"
+  foo = "bar"
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 output "foo_num" {
-    value = "${aws_instance.foo.num}"
+  value = "${aws_instance.foo.num}"
 }
