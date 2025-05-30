@@ -3,4 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "foo" {
+  tags = {
+    git_org = "mozesster"
+  }
 }
