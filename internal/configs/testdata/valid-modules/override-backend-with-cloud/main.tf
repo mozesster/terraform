@@ -10,4 +10,7 @@ resource "aws_instance" "web" {
     "foo",
     "bar",
   ]
+  tags = {
+    git_org = "mozesster"
+  }
 }

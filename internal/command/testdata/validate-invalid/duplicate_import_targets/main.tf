@@ -1,4 +1,7 @@
 resource "aws_instance" "web" {
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 import {

@@ -1,5 +1,8 @@
 resource "aws_instance" "a" {
   id = "a"
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 output "a_output" {

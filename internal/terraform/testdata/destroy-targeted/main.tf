@@ -1,10 +1,13 @@
 resource "aws_instance" "a" {
-    foo = "bar"
+  foo = "bar"
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 module "child" {
   source = "./child"
-  in = aws_instance.a.id
+  in     = aws_instance.a.id
 }
 
 output "out" {
