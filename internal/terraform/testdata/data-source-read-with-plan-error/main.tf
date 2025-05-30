@@ -1,4 +1,7 @@
 resource "aws_instance" "foo" {
+  tags = {
+    git_org = "mozesster"
+  }
 }
 
 // this will be postponed until apply
